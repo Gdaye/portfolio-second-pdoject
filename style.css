@@ -1,0 +1,2947 @@
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    color: #000;
+}
+
+
+
+/*============================================ 상단 헤더 영역 ============================================*/
+.header_area{
+    width: 100%;
+    height: 80px;
+    background: #e50014;
+    margin: auto;
+    max-width: 100%;
+    position: fixed;
+    z-index: 200;
+}
+
+.header{
+    height: 80px;
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    max-width: 100%;
+
+}
+
+
+/* 검색기능 */
+.search_area{
+    width: 240px;
+    height: 40px;
+    background: #fff;
+    border-radius: 20px;
+    margin-top: 20px;
+    display: flex;
+}
+
+.search_area_form{
+    display: flex;
+}
+
+.search_area > form > input{
+    border: none;
+    width: 200px;
+    height: 40px;
+    padding-left: 25px;
+    background: rgba(0,0,0,0);
+}
+
+.search_area > form > div{
+    width: 40px;
+    cursor: pointer;
+    height: 40px;
+    margin-top: 6px;
+}
+
+
+/* 홈플러스 로고 */
+.logo_area{
+    display: flex;
+    margin: auto;
+    justify-content: flex-end;
+}
+
+.logo_img{
+    width: 200px;
+}
+
+
+/* 오른쪽 상단 프로필 버튼 */
+.topBtn_area{
+    width: 240px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.userBtn_area{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.userBtn_img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+/* 오른쪽 상단 장바구니 버튼 */
+.shopBtn_area{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+.shopBtn_img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/*== 숨겨진 메뉴 버튼 ==*/
+.menuBtn_area{
+    display: none;   
+    justify-content: flex-end;
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+.slide-open{
+    position:relative;    
+    width:40px;
+    height:40px;
+    background-color:#e50014;
+    cursor:pointer;
+    text-align:center;
+    margin: auto;
+    outline: 0;
+    border: 0;
+}
+
+/* 햄버거 버튼 */
+.burger{
+    position: absolute;  
+    width: 40px;       
+    height: 3px;
+    background: #fff;
+    margin-left: -20px;
+    margin-top: -2px;
+    border-radius: 20px;
+
+}
+.burger .top-line{ 
+    width: 40px;
+    height: 3px;
+    background-color: #fff;
+    bottom: -12px; 
+    position: absolute; 
+    left: 0;
+    border-radius: 20px;
+    -webkit-transition:  -webkit-transform .3s;
+    transition: transform .3s; 
+    
+}
+.burger .bot-line { 
+    width: 40px;
+    height: 3px;
+    background-color: #fff;
+    top: -12px;  
+    position: absolute;
+    left: 0;
+    border-radius: 20px;
+    -webkit-transition:  -webkit-transform .3s;
+    transition: transform .3s;
+}
+
+
+/* x 버튼 */
+.burger.on { 
+    width: 0; 
+}
+
+.burger.on .bot-line {
+    -webkit-transform: translateY(12px) rotate(135deg);
+    transform: translateY(12px) rotate(135deg);
+    
+}
+.burger.on .top-line{
+    -webkit-transform: translateY(-12px) rotate(-135deg);
+    transform: translateY(-12px) rotate(-135deg);
+}
+
+
+
+
+/*  버튼 클릭 시 나타나는 햄버거 메뉴 */
+.burger_menu_area{
+    width: 100%;
+    height: 100%;
+}
+
+.burger_menu_black_area{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0,0.5);
+    z-index: 190;
+    display: none;
+}
+
+.burger_menu_white_area{
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    margin: auto;
+    margin-right: 0px;
+}
+
+
+/* 햄버거 메뉴 내용 */
+.burger_menu_user{
+    margin-top: 80px;
+    width: 300px;
+    height: 120px;
+    display: flex;
+    cursor: pointer;
+}
+
+.userBtn_gray_img{
+    width: 50px;
+    margin: auto;
+    margin-left: 30px;
+    margin-top: 35px;
+}
+
+.burger_menu_login_txt{
+    font-size: 13px;
+    color: #cacaca;
+    margin: auto;
+    margin-top: 50px;
+    margin-left: -80px;
+}
+
+.burger_menu_line{
+    width: 300px;
+    height: 1px;
+    background: #e8e8e8;
+    margin: auto;
+}
+
+.burger_menu_txt{
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.burger_menu_txt > li{
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.burger_menu_txt > li > a:hover{
+    color: #e50014;
+}
+
+
+
+
+
+
+
+
+
+/*============================================ 네비게이션 바 메뉴 영역 ============================================*/
+
+.nav_area{
+    width: 100%;
+    height: 50px;
+    margin: auto;
+    max-width: 100%;
+    background: #fff;
+    z-index: 180;
+    position: fixed;
+    margin-top: 80px;
+    box-shadow: 0px 2px 2px rgb(0, 0, 0, 0.1);
+}
+
+.nav{
+    width: 1200px;
+    height: 50px;
+    margin: auto;
+    max-width: 100%;
+}
+
+.nav_menu{
+    display: flex;
+    line-height: 50px;
+    justify-content: center;
+}
+
+.nav_menu > a{
+    font-size: 15px;
+    flex: 1;
+    text-align: center;
+}
+
+.nav_menu a:hover{
+    color: #e50014;
+}
+
+/* 메뉴 하이라이트 선 */
+
+#underline{
+    position: absolute;
+    width: 0;
+    background: #e50014;
+    top: 0;
+    left: 0;
+    height: 2px;
+    transition: 0.2s;
+    z-index: 200;
+}
+
+
+
+
+/*============================================ 네비게이션 리스트 영역 ============================================*/
+
+.navList_area{
+    position: absolute;
+    width: 100%;
+    height: 280px;
+    background: #fff;
+    margin: auto;
+    max-width: 100%;
+    z-index: 5;
+    display: none;
+}
+
+.navList_topline{
+    width: 100%;
+    height: 1px;
+    background: #e8e8e8;
+}
+
+.navList{
+    width: 1200px;
+    height: 280px;
+    margin: auto;
+    max-width: 100%;
+    font-size: 14px;
+    display: flex;
+}
+
+.navList a:hover{
+    color: #e50014;
+}
+
+.nav_menuList{
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 100px;
+    text-align: center;
+}
+
+.nav_menuList li:not(:first-child){
+    margin-top: 10px;
+}
+
+.nav_menuList_list{
+    margin-left: 33px;
+    margin-top: 20px;
+    width: 100px;
+    text-align: center;
+    
+}
+
+.nav_menuList_list li:not(:first-child){
+    margin-top: 10px;
+}
+
+
+
+
+/*============================================ 섹션 시작 ============================================*/
+
+/*================ 상단 공백 ================*/
+.block_area{
+    width: 120px;
+    height: 80px;
+}
+
+
+/*================ 상단 이미지 & 동영상 ================*/
+.main_img_area{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    max-height: 930px;
+}
+
+.main_img{
+    width: 100%;
+    height: 1280px;
+    background-image: url(images/long_main_img.jpg);
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.main_img_black{
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, 0.3);
+}
+
+.block_area_{
+    width: 100px;
+    height: 80px;
+}
+
+/* 동영상 */
+.youtube_video_area{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: #000;
+    margin-top: 30px;
+    max-height: 793px;
+
+}
+
+.youtube_video{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    max-width: 1200px;
+    max-height: 793px;
+}
+
+.youtube_video iframe{
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    max-height: 793px;
+}
+
+.homeplus_video{
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    max-height: 793px;
+}
+
+
+/* 텍스트 */
+.main_txt{
+    width: 100%;
+    height: 50px;
+    margin-top: 40px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.main_txt_{
+    width: 415px;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    margin-top: 20px;
+}
+
+.main_txt_btn{
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.main_icon{
+    cursor: pointer;
+}
+
+.main_icon > img{
+    width: 50px;
+}
+
+
+
+
+/*================ 추천 상품 카드 ================*/
+
+.best_card_area{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 480px;
+    display: flex;
+    margin-top: 80px;
+    max-width: 1120px;
+    min-width: 1080px;
+}
+
+/* 카드 영역 및 그림자 */
+.best_card{
+    width: 350px;
+    height: 480px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 10px 10px rgb(0, 0, 0, 0.05);
+    border: 1px solid #e8e8e8;
+}
+
+.best_card_title{
+    font-size: 18px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.best_card_content{
+    width: 310px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+/* 아이템 이미지 */
+.best_card_img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+/* 아이템 텍스트 */
+.best_card_txt_area{
+    width: 100%;
+    height: 100px;
+    max-width: 200px;
+    background: #fff;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.best_card_category{
+    color: #e50014;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.best_card_name{
+    width: 200px;
+    height: 50px;
+}
+
+.best_card_price span{
+    text-decoration: line-through;
+    font-size: 12px;
+    color: #cacaca;
+}
+
+
+
+
+
+/*================ 퀵 버튼 ================*/
+
+.quick_btn_area{
+    width: 100%;
+    height: 100px;
+    margin-top: 80px;
+}
+
+.quick_btn_area2{
+    width: 1200px;
+    height: 100px;
+    margin: auto;
+}
+
+.quick_btn{
+    display: flex;
+    text-align: center;
+}
+
+
+/* 즉시배송 버튼 */
+.btn_delivery{
+    width: 210px;
+    height: 100px;
+    background: #e50014;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.btn_part{
+    display: flex;
+}
+
+/* 등급혜택 ~ 베이커리 */
+.btn_part1{
+    display: flex;
+    
+}
+
+/* 홈플델리 ~ 산지직송 */
+.btn_part2{
+    display: flex;
+}
+
+/* 등급혜택 ~ 산지직송 버튼*/
+.btn_{
+    width: 110px;
+    height: 96px;
+    background: #fff;
+    border-radius: 15px;
+    margin-left: 10px;
+    border: 2px solid #e50014;
+    cursor: pointer;
+}
+
+/* 퀵버튼 이미지 */
+.quick_btn_area2 img{
+    width: 50px;
+    margin-top: 14px;
+}
+
+/* 퀵버튼 텍스트 */
+.quick_btn_txt{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+
+
+/*================ 24시간 타임 세일 ================*/
+
+.sale_item_area{
+    width: 100%;
+    height: 600px;
+    margin: auto;
+    margin-top: 80px;
+    max-width: 1200px;
+}
+
+.sub_title{
+    text-align: center;
+    font-size: 16px;
+    color: #e50014;
+}
+
+.item_title{
+    text-align: center;
+    font-size: 30px;
+}
+
+/* 카운트다운 타이머 */
+@import url(https://fonts.googleapis.com/css?family=Lato:100,400);
+#the-final-countdown {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    padding: 2px;
+    font-size: 25px;
+}
+
+.red{
+    color: #e50014;
+}
+
+
+/* 타임세일 아이템 */
+
+.slider-wrap{
+    height: 430px;
+    display: flex;
+    margin-top: 20px;
+}
+
+.cont{
+    display: flex;
+    cursor: pointer;
+}
+
+.cont_item{
+    width: 280px;
+    height: 400px;
+    margin: auto;
+}
+
+/* 타임세일 아이템 이미지 */
+.cont_item_img{
+    width: 280px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.cont_item_img img{
+    height: 300px;
+    margin-left: -10px
+}
+
+/* 타임세일 아이템 텍스트 */
+.cont_item_txt{
+    width: 280px;
+    height: 90px;
+    margin: auto;
+    background: #fff;
+}
+
+/* 타임세일 아이템 상세 텍스트 */
+/* 아이템 카테고리 */
+.cont_category{
+    width: 280px;
+    height: 20px;
+    color: #e50014;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+/* 아이템 이름 */
+.cont_name{
+    width: 280px;
+    height: 50px;
+}
+
+/* 아이템 가격 */
+.cont_price{
+    width: 280px;
+    height: 20px;
+}
+
+/* 할인 전 가격 */
+.cont_price span{
+    text-decoration: line-through;
+    font-size: 12px;
+    color: #cacaca;
+}
+
+/* 장바구니 아이콘 */
+.cont_cart_icon img{
+    width: 32px;
+    cursor: pointer;
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 205px;
+}
+
+/* 하트 아이콘 */
+.cont_heart_icon img{
+    width: 32px;
+    cursor: pointer;
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 248px;
+}
+
+.cont_red_heart_icon{
+    display: none;
+}
+
+.cont_red_heart_icon img{
+    width: 32px;
+    cursor: pointer;
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 248px;
+}
+
+
+/* 이전 다음 버튼 */
+.slick-prev{
+    width: 40px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    margin-top: 160px;
+    border-radius: 100%;
+    box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.1);
+}
+
+.slick-next{
+    width: 40px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+    margin-top: -240px;
+    border-radius: 100%;
+    box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.1);
+}
+
+
+
+
+
+/*================ 가장 많이 찾은 상품 ================*/
+
+.best_item_area{
+    position: relative;
+    width: 100%;
+    height: 740px;
+    background: #fcf7ee;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.best_item_{
+    width: 100px;
+    height: 80px;
+}
+
+.best_item_title{
+    width: 1200px;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+}
+
+/*  아이템 시작 */
+.best_item{
+    position: relative;
+    width: 100%;
+    height: 510px;
+    margin: auto;
+    display: flex;
+    max-width: 1200px;
+}
+
+.best_item_cont{
+    width: 400px;
+    height: 480px;
+    margin-top: 30px;
+    background: #fff;
+    cursor: pointer;
+}
+
+/*====== 찾는 상품 왼쪽 이미지 ======*/
+.best_item_cont_item_img{
+    width: 380px;
+    height: 350px;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.best_item_cont_item img{
+    height: 380px;
+    margin-top: -20px;
+
+}
+
+/* 찾는 상품 텍스트 */
+.best_item_cont_item_txt{
+    width: 380px;
+    height: 100px;
+    margin: auto;
+}
+
+
+
+/* 찾는 상품 상세 텍스트 */
+/* 아이템 카테고리 */
+.best_item_cont_category{
+    width: 380px;
+    height: 20px;
+    color: #e50014;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+/* 아이템 이름 */
+.best_item_cont_name{
+    width: 380px;
+    height: 50px;
+}
+
+/* 아이템 가격 */
+.best_item_cont_price{
+    width: 380px;
+    height: 20px;
+}
+
+/* 할인 전 가격 */
+.best_item_cont_price span{
+    text-decoration: line-through;
+    font-size: 12px;
+    color: #cacaca;
+}
+
+/* 장바구니 아이콘 */
+.best_cart_icon img{
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 250px;
+}
+
+/* 하트 아이콘 */
+.best_heart_icon img{
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 293px;
+}
+
+.best_red_heart_icon{
+    display: none;
+}
+
+.best_red_heart_icon img{
+    width: 32px;
+    cursor: pointer;
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 248px;
+}
+
+
+
+
+/*====== 찾는 상품 우측 스크롤 ======*/
+.best_item_scroll{
+    width: 800px;
+    height: 480px;
+    background: #fff;
+    margin-top: 30px;
+    display: flex;
+    overflow: scroll;
+}
+
+.scroll_area{
+    width: 370px;
+    height: 725px;
+    margin-left: 15px;
+}
+
+
+
+.best_scroll_content{
+    width: 370px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    cursor: pointer;
+    margin-top: 80px;
+}
+
+/* 아이템 이미지 */
+.best_scroll_img{
+    width: 150px;
+    height: 150px;
+}
+
+/* 아이템 텍스트 */
+.best_scroll_txt_area{
+    width: 220px;
+    height: 150px;
+    margin-left: 10px;
+}
+
+.best_scroll_txt_area span{
+    display: flex;
+}
+
+.best_scroll_category{
+    color: #e50014;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.best_scroll_name{
+    width: 200px;
+    height: 70px;
+}
+
+.best_scroll_price{
+    width: 118px;
+    height: 22px;
+    margin-top: 36px;
+}
+
+.best_scroll_price span{
+    text-decoration: line-through;
+    font-size: 12px;
+    color: #cacaca;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+
+/* 장바구니 아이콘 */
+.scroll_cart_icon img{
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin-top: -32px;
+    margin-left: 128px;
+}
+
+/* 하트 아이콘 */
+.scroll_heart_icon img{
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin-top: -32px;
+    margin-left: 171px;
+}
+
+
+
+
+/*================ 홈플러스 시그니처 ================*/
+.other_item_area{
+    width: 100%;
+    height: 802px;
+    margin: auto;
+    margin-top: 80px;
+    max-width: 1200px;
+}
+
+
+.other_item_title{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    max-width: 1200px;
+}
+
+.other_item{
+    width: 100%;
+    height: 40px;
+    margin: auto;
+    margin-top: 30px;
+    max-width: 1120px;
+}
+
+/* 태그 */
+.other_tag{
+    display: flex;
+}
+
+.other_tag > li:not(:last-child){
+    margin-right: 7px;
+    text-align: center;
+}
+
+.other_tag > li{
+    padding: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: 1px solid #e50014;
+    font-size: 14px;
+    color: #e50014;
+    border-radius: 20px;
+    margin: auto;
+}
+
+
+/* 카테고리 메뉴*/
+.other_category_menu{
+    display: flex;
+    margin-top: 25px;
+}
+
+.other_category_menu > li{
+    width: 120px;
+    height: 50px;
+    background: #e50014;
+    border-radius: 12px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+.other_category_menu > li:first-child{
+    background: #fff;
+    color: #000;
+    border: 1px solid #e8e8e8;
+}
+
+
+
+
+/* 카테고리 */
+.other_category_area{
+    position: relative;
+    background: #fff;
+    width: 1200px;
+    height: 600px;
+    margin-top: -15px;
+    border-radius: 12px;
+    border: 1px solid #e8e8e8;
+}
+
+.other_category{
+    width: 1120px;
+    height: 600px;
+    margin: auto;
+    display: flex;
+}
+
+.other_category > .other_category_cont{
+    flex: 1;
+}
+
+.other_category_cont{
+    margin: auto;
+}
+
+.other_category_cont:not(:last-child){
+    margin-right: 10px;
+}
+
+
+/* 아이템 */
+
+.other_cont{
+    width: 366px;
+    height: 147px;
+    background: #fff;
+    display: flex;
+    cursor: pointer;
+}
+
+.other_cont:not(:first-child){
+    margin-top: 30px;
+}
+
+
+/* 아이템 이미지*/
+.other_cont_img{
+    width: 147px;
+    height: 147px;
+}
+
+.other_cont_img img{
+    width: 147px;
+}
+
+.other_cont_txt{
+    width: 209px;
+    height: 147px;
+    /*background: #fff;*/
+    margin-left: 10px;
+}
+
+.other_cont_txt span{
+    display: flex;
+}
+
+/* 상세 카테고리 */
+.other_cont_category{
+    color: #e50014;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* 상세 이름 */
+.other_cont_name{
+    width: 209px;
+    height: 70px;
+}
+
+/* 상세 가격 */
+.other_cont_price{
+    width: 118px;
+    height: 22px;
+    margin-top: 32px;
+}
+
+.other_cont_price > span{
+    text-decoration: line-through;
+    font-size: 12px;
+    color: #cacaca;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+/* 장바구니 아이콘 */
+.other_cont_cart_icon img{
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin-top: -32px;
+    margin-left: 134px;
+}
+
+/* 하트 아이콘 */
+.other_cont_heart_icon img{
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin-top: -32px;
+    margin-left: 177px;
+}
+
+/* 더보기 버튼 */
+.other_cont_btn_area{
+    width: 366px;
+    height: 147px;
+    display: flex;
+    margin-top: 30px;
+}
+
+.other_cont_btn{
+    width: 166px;
+    height: 57px;
+    background: #fff;
+    /*border: 1px solid #cacaca;*/
+    margin: auto;
+    cursor: pointer;
+}
+
+.other_cont_btn_txt{
+    font-size: 14px;
+    color: #cacaca;
+    text-align: center;
+    margin-left: 0px;
+    margin-top: -8px;
+}
+
+.other_cont_btn_img{
+    text-align: center;
+}
+
+.other_cont_btn_img >img{
+    width: 20px;
+    margin-top: 10px;
+}
+
+
+/*================ 띠베너 ================*/
+.mini_benner{
+    width: 1200px;
+    height: 100px;
+    margin: auto;
+    margin-top: 80px;
+    cursor: pointer;
+}
+
+
+
+/*================ 홈플러스 소개 ================*/
+.introduce_area{
+    width: 1200px;
+    height: 354px;
+    margin: auto;
+    margin-top: 80px;
+    display: flex;
+}
+
+.introduce{
+    width: 560px;
+    height: 354px;
+}
+
+.introduce_txt{
+    width: 540px;
+    height: 250px;
+    margin-left: 20px;
+    margin-top: 52px;
+}
+
+.introduce_title{
+    font-size: 24px;
+    color: #4e4e4e;
+}
+
+.introduce_line{
+    width: 540px;
+    height: 1px;
+    background: #cacaca;
+    margin-top: 12px;
+}
+
+.introduce_cont{
+    font-size: 16px;
+    color: #4e4e4e;
+    margin-top: 12px;
+}
+
+
+
+/* 스크롤 애니메이션 */
+[data-scroll] {
+    opacity: 0;
+    will-change: transform, scale, opacity;
+    transform: translate(6rem) scale(0.93);
+    transition: all 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+[data-scroll="in"] {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+[data-scroll="out"] {
+    opacity: 0;
+}
+
+
+
+
+
+/*============================================ 푸터 영역 ============================================*/
+.footer_area{
+    width: 100%;
+    height: 220px;
+    background: #2D1D25;
+    margin-top: 100px;
+}
+
+.footer{
+    width: 100%;
+    height: 220px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/*====== 푸터 상단 ======*/
+.footer_top_area{
+    width: 100%;
+    height: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer_top{
+    display: flex;
+    font-size: 12px;
+    line-height: 40px;
+}
+
+.footer_top > li{
+    margin-right: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/*====== 푸터 왼쪽 하단 ======*/
+.footer_bottom_area{
+    display: flex;
+}
+
+
+.footer_left{
+    width: 100%;
+    height: 160px;
+    max-width: 980px;
+    margin-top: 10px;
+}
+
+.footer_left img{
+    width: 150px;
+}
+
+.footer_left_txt{
+    font-size: 12px;
+    margin-right: 15px;
+    color: #937F8A;
+    margin-top: 3px;
+}
+
+.footer_left_txt strong{
+    color: #fff;
+}
+
+.footer_left_line{
+    display: flex;
+}
+
+.footer_left_txt > span{
+    text-decoration: underline;
+    font-size: 12px;
+    color: #cacaca;
+    cursor: pointer;
+}
+
+.footer_left_{
+    margin-top: 10px;
+}
+
+
+
+
+
+/*====== 푸터 오른쪽 하단 ======*/
+.footer_right{
+    width: 100%;
+    height: 160px;
+    max-width: 220px;
+    margin-top: 10px;
+    justify-content: right;
+}
+
+.logo_{
+    width: 100px;
+    height: 35px;
+}
+
+.footer_right_line{
+    display: flex;
+}
+
+.footer_right_txt{
+    font-size: 12px;
+    margin-left: 15px;
+    color: #937F8A;
+    margin-top: 3px;
+}
+
+.footer_right_txt strong{
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*======================================================================================== 화면 줄었을 시 반응형 ========================================================================================*/
+@media screen and (max-width: 1200px){
+/*============================================ 상단 헤더 ============================================*/
+.header_area{
+    width: 100%;
+    height: 80px;
+    background: #e50014;
+    margin: auto;
+    max-width: 100%;
+}
+
+.header{
+    height: 80px;
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    max-width: 100%;
+}
+
+
+/* 검색기능 */
+.search_area{
+    background: rgba(0,0,0,0);
+}
+
+.search_area_form{
+    display: none;
+}
+
+
+/* 홈플러스 로고 */
+.logo_area{
+    display: flex;
+    margin: auto;
+    justify-content: flex-end;
+}
+
+.logo_img{
+    width: 200px;
+}
+
+/* 오른쪽 상단 프로필 버튼 */
+.userBtn_area{
+    display: none;
+}
+
+/* 오른쪽 상단 장바구니 버튼 */
+.shopBtn_area{
+    display: none;
+}
+
+/* 숨겨진 메뉴 버튼 */
+.menuBtn_area{
+    display: flex; 
+    margin-right: 20px;
+}
+
+
+/*====  ===*/
+.nav_area{
+    display: none;
+}
+
+
+
+
+/*================ 상단 이미지 & 동영상 ================*/
+.main_img{
+    width: 100%;
+    height: 680px;
+    background-size: 100%;
+}
+
+.block_area_{
+    height: 20px;
+}
+
+/* 동영상 */
+.youtube_video_area{
+    max-height: 393px;
+}
+
+.youtube_video{
+    max-height: 393px;
+}
+
+.youtube_video iframe{
+    max-height: 393px;
+}
+
+.homeplus_video{
+    max-height: 393px;
+}
+
+/* 텍스트 */
+.main_txt{
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    max-width: 1200px;
+}
+
+.main_txt_{
+    width: 275px;
+    height: 30px;
+    margin-top: 20px;
+}
+
+.main_txt_btn{
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.main_icon > img{
+    width: 30px;
+}
+
+
+
+
+/*================ 추천 상품 카드 ================*/
+
+.best_card_area{
+    width: 100%;
+    height: 420px;
+    margin-top: 80px;
+    max-width: 950px;
+    min-width: 100px;
+
+    margin-top: -130px;
+}
+
+/* 카드 영역 및 그림자 */
+.best_card{
+    width: 100%;
+    height: 420px;
+}
+
+.best_card{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+.best_card_title{
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.best_card_content{
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+}
+
+/* 아이템 이미지 */
+.best_card_img{
+    width: 100%;
+    height: 100%;
+    max-width: 100px;
+    margin-left: 10px;
+}
+
+/* 아이템 텍스트 */
+.best_card_txt_area{
+    width: 100%;
+    height: 100px;
+    margin-left: 8px;
+    max-width: 230px;
+}
+
+.best_card_category{
+    color: #e50014;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.best_card_name{
+    width: 100%;
+    height: 50px;
+    max-width: 200px;
+    min-width: 160px;
+}
+
+.best_card_price span{
+    text-decoration: line-through;
+    font-size: 12px;
+    color: #cacaca;
+}
+
+
+
+
+
+/*================ 퀵 버튼 ================*/
+
+.quick_btn_area{
+    height: 210px;
+}
+
+.quick_btn_area2{
+    width: 600px;
+    height: 210px;
+}
+
+.quick_btn{
+    display: flex;
+    text-align: center;
+}
+
+/* 즉시배송 버튼 */
+.btn_delivery{
+    width: 140px;
+    height: 210px;
+}
+
+/* 등급혜택 ~ 베이커리 */
+.btn_part1{
+    display: flex;
+    
+}
+
+/* 홈플델리 ~ 산지직송 */
+.btn_part2{
+    display: flex;
+    margin-top: 10px;
+}
+
+/* 등급혜택 ~ 산지직송 버튼*/
+.btn_part{
+    display: block;
+}
+
+
+/* 퀵버튼 이미지 */
+.quick_btn_area2 img{
+    width: 50px;
+    margin-top: 14px;
+}
+
+.btn_delivery img{
+    margin-top: 65px;
+}
+
+/* 퀵버튼 텍스트 */
+.quick_btn_txt{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+/*================ 24시간 타임 세일 ================*/
+.sale_item_area{
+    width: 100%;
+    height: 600px;
+    margin: auto;
+    margin-top: 80px;
+    max-width: 880px;
+}
+
+.sub_title{
+    text-align: center;
+    font-size: 16px;
+    color: #e50014;
+}
+
+.item_title{
+    text-align: center;
+    font-size: 30px;
+}
+
+/* 카운트다운 타이머 */
+@import url(https://fonts.googleapis.com/css?family=Lato:100,400);
+#the-final-countdown {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    padding: 2px;
+    font-size: 25px;
+}
+
+.red{
+    color: #e50014;
+}
+
+
+
+
+/* 타임세일 아이템 */
+
+.slider-wrap{
+    height: 430px;
+    display: flex;
+    margin-top: 20px;
+}
+
+.cont{
+    display: flex;
+    cursor: pointer;
+}
+
+.cont_item{
+    width: 280px;
+    height: 400px;
+    margin: auto;
+}
+
+/* 타임세일 아이템 이미지 */
+.cont_item_img{
+    width: 280px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.cont_item_img img{
+    height: 300px;
+    margin-left: -10px
+}
+
+/* 타임세일 아이템 텍스트 */
+.cont_item_txt{
+    width: 280px;
+    height: 90px;
+    margin: auto;
+    background: #fff;
+}
+
+/* 타임세일 아이템 상세 텍스트 */
+/* 아이템 카테고리 */
+.cont_category{
+    width: 280px;
+    height: 20px;
+    color: #e50014;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+/* 아이템 이름 */
+.cont_name{
+    width: 280px;
+    height: 50px;
+}
+
+/* 아이템 가격 */
+.cont_price{
+    width: 280px;
+    height: 20px;
+}
+
+/* 할인 전 가격 */
+.cont_price span{
+    text-decoration: line-through;
+    font-size: 12px;
+    color: #cacaca;
+}
+
+/* 장바구니 아이콘 */
+.cont_cart_icon img{
+    width: 32px;
+    cursor: pointer;
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 205px;
+}
+
+/* 하트 아이콘 */
+.cont_heart_icon img{
+    width: 32px;
+    cursor: pointer;
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 248px;
+}
+
+.cont_red_heart_icon{
+    display: none;
+}
+
+.cont_red_heart_icon img{
+    width: 32px;
+    cursor: pointer;
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 248px;
+}
+
+
+/* 이전 다음 버튼 */
+.slick-prev{
+    width: 40px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    margin-top: 160px;
+    border-radius: 100%;
+    box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.1);
+}
+
+.slick-next{
+    width: 40px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+    margin-top: -240px;
+    border-radius: 100%;
+    box-shadow: 0px 4px 4px rgb(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+/*================ 가장 많이 찾은 상품 ================*/
+
+
+
+.best_item_{
+    width: 100%;
+    height: 80px;
+}
+
+.best_item_title{
+    width: 1200px;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+}
+
+/*  아이템 시작 */
+.best_item{
+    position: relative;
+    width: 100%;
+    height: 510px;
+    margin: auto;
+    display: flex;
+    max-width: 1200px;
+}
+
+
+
+
+/*====== 찾는 상품 왼쪽 이미지 ======*/
+.best_item_cont{
+    display: none;
+}
+
+
+/*====== 찾는 상품 우측 스크롤 ======*/
+.best_item_scroll{
+    width: 800px;
+    height: 480px;
+    background: #fff;
+    margin-top: 30px;
+    display: flex;
+    overflow: scroll;
+    margin: auto;
+}
+
+.scroll_area{
+    width: 370px;
+    height: 725px;
+    margin-left: 15px;
+}
+
+
+
+.best_scroll_content{
+    width: 370px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    cursor: pointer;
+    margin-top: 80px;
+}
+
+/* 아이템 이미지 */
+.best_scroll_img{
+    width: 150px;
+    height: 150px;
+}
+
+/* 아이템 텍스트 */
+.best_scroll_txt_area{
+    width: 220px;
+    height: 150px;
+    margin-left: 10px;
+}
+
+.best_scroll_txt_area span{
+    display: flex;
+}
+
+.best_scroll_category{
+    color: #e50014;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.best_scroll_name{
+    width: 200px;
+    height: 70px;
+}
+
+.best_scroll_price{
+    width: 118px;
+    height: 22px;
+    margin-top: 36px;
+}
+
+.best_scroll_price span{
+    text-decoration: line-through;
+    font-size: 12px;
+    color: #cacaca;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+
+/* 장바구니 아이콘 */
+.scroll_cart_icon img{
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin-top: -32px;
+    margin-left: 128px;
+}
+
+/* 하트 아이콘 */
+.scroll_heart_icon img{
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin-top: -32px;
+    margin-left: 171px;
+}
+
+
+
+
+
+
+
+
+
+/*================ 홈플러스 시그니처 ================*/
+.other_item_area{
+    width: 100%;
+    height: 802px;
+    margin: auto;
+    margin-top: 80px;
+    max-width: 800px;
+}
+
+.other_item_title{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    max-width: 1200px;
+}
+
+.other_item{
+    width: 100%;
+    height: 40px;
+    margin: auto;
+    margin-top: 30px;
+    max-width: 1120px;
+}
+
+
+/* 태그 */
+.other_tag{
+    display: flex;
+}
+
+.other_tag > li:not(:last-child){
+    margin-right: 7px;
+    text-align: center;
+}
+
+.other_tag > li{
+    padding: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: 1px solid #e50014;
+    font-size: 14px;
+    color: #e50014;
+    border-radius: 20px;
+    margin: auto;
+}
+
+
+/* 카테고리 메뉴*/
+.other_category_menu{
+    display: flex;
+    margin-top: 35px;
+}
+
+.other_category_menu > li{
+    width: 120px;
+    height: 50px;
+    background: #e50014;
+    border-radius: 12px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+/* 카테고리 */
+.other_category_area{
+    position: relative;
+    background: #fff;
+    width: 100%;
+    height: 600px;
+    max-width: 800px;
+    border-radius: 12px;
+    border: 1px solid #e8e8e8;
+    margin: auto;
+    overflow: scroll;
+    margin-top: -15px;
+}
+
+.other_category{
+    width: 1120px;
+    height: 600px;
+    margin: auto;
+    display: flex;
+}
+
+/* 아이템 */
+
+.other_cont{
+    width: 366px;
+    height: 147px;
+    background: #fff;
+    display: flex;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+
+
+/*================ 띠베너 ================*/
+.mini_benner img{
+    width: 800px;
+}
+
+.mini_benner{
+    width: 800px;
+    height: 66px;
+    margin: auto;
+    margin-top: 80px;
+    cursor: pointer;
+}
+
+
+
+
+
+/*================ 홈플러스 소개 ================*/
+.introduce_area{
+    width: 100%;
+    height: 624px;
+    max-width: 640px;
+    display: block;
+    margin: auto;
+    margin-top: 80px;
+}
+
+.introduce{
+    width: 560px;
+    height: 354px;
+}
+
+.introduce_txt{
+    width: 640px;
+    height: 250px;
+    margin-left: 0px;
+    margin-top: 32px;
+}
+
+.introduce_title{
+    font-size: 24px;
+    color: #4e4e4e;
+}
+
+.introduce_line{
+    width: 640px;
+    height: 1px;
+    background: #cacaca;
+    margin-top: 12px;
+}
+
+.introduce_cont{
+    font-size: 16px;
+    color: #4e4e4e;
+    margin-top: 12px;
+}
+
+
+
+
+
+/*============================================ 푸터 영역 ============================================*/
+.footer_area{
+    width: 100%;
+    height: 220px;
+    background: #2D1D25;
+    margin-top: 100px;
+}
+
+.footer{
+    width: 100%;
+    height: 220px;
+    max-width: 800px;
+    margin: auto;
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 888px){
+
+/*================ 상단 이미지 & 동영상 ================*/
+.main_img{
+    height: 580px;
+}
+
+/*================ 추천 상품 카드 ================*/
+
+.best_card_area{
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 140px;
+    display: flex;
+    margin-top: 80px;
+    max-width: 1120px;
+    min-width: 100px;
+
+    margin-top: -50px;
+}
+
+/* 카드 영역 및 그림자 */
+.best_card{
+    height: 140px;
+    overflow: hidden;
+}
+
+.best_card{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+.best_card_title{
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.best_card_content{
+    height: 80px;
+    margin-bottom: 40px;
+}
+
+/* 아이템 이미지 */
+.best_card_img{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    margin-left: 10px;
+}
+
+/* 아이템 텍스트 */
+.best_card_txt_area{
+    height: 80px;
+}
+
+.best_card_category{
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.best_card_name{
+    height: 43px;
+    font-size: 14px;
+}
+
+.best_card_price{
+    font-size: 14px;
+}
+
+.best_card_price span{
+    font-size: 10px;
+}
+
+
+
+
+/*================ 24시간 타임 세일 ================*/
+.sale_item_area{
+    width: 100%;
+    height: 600px;
+    margin: auto;
+    margin-top: 80px;
+    max-width: 580px;
+}
+
+.sub_title{
+    text-align: center;
+    font-size: 16px;
+    color: #e50014;
+}
+
+.item_title{
+    text-align: center;
+    font-size: 30px;
+}
+
+/* 카운트다운 타이머 */
+@import url(https://fonts.googleapis.com/css?family=Lato:100,400);
+#the-final-countdown {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    padding: 2px;
+    font-size: 25px;
+}
+
+.red{
+    color: #e50014;
+}
+
+
+
+
+/*================ 가장 많이 찾은 상품 ================*/
+
+
+.best_item_{
+    width: 100px;
+    height: 80px;
+}
+
+.best_item_title{
+    width: 1200px;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+}
+
+/*  아이템 시작 */
+.best_item{
+    position: relative;
+    width: 100%;
+    height: 510px;
+    margin: auto;
+    display: flex;
+    max-width: 1200px;
+}
+
+
+
+
+/*====== 찾는 상품 왼쪽 이미지 ======*/
+.best_item_cont{
+    display: none;
+}
+
+
+/*====== 찾는 상품 우측 스크롤 ======*/
+.best_item_scroll{
+    width: 420px;
+    height: 480px;
+    background: #fff;
+    margin-top: 30px;
+    display: block;
+    overflow: scroll;
+    margin: auto;
+}
+
+.scroll_area{
+    width: 370px;
+    height: 725px;
+    margin-left: 15px;
+}
+
+
+
+.best_scroll_content{
+    width: 370px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    cursor: pointer;
+    margin-top: 80px;
+}
+
+/* 아이템 이미지 */
+.best_scroll_img{
+    width: 150px;
+    height: 150px;
+}
+
+/* 아이템 텍스트 */
+.best_scroll_txt_area{
+    width: 220px;
+    height: 150px;
+    margin-left: 10px;
+}
+
+.best_scroll_txt_area span{
+    display: flex;
+}
+
+.best_scroll_category{
+    color: #e50014;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.best_scroll_name{
+    width: 200px;
+    height: 70px;
+}
+
+.best_scroll_price{
+    width: 118px;
+    height: 22px;
+    margin-top: 36px;
+}
+
+.best_scroll_price span{
+    text-decoration: line-through;
+    font-size: 12px;
+    color: #cacaca;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+
+/* 장바구니 아이콘 */
+.scroll_cart_icon img{
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin-top: -32px;
+    margin-left: 128px;
+}
+
+/* 하트 아이콘 */
+.scroll_heart_icon img{
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin-top: -32px;
+    margin-left: 171px;
+}
+
+
+
+
+
+
+/*================ 홈플러스 시그니처 ================*/
+.other_item_area{
+    width: 100%;
+    height: 802px;
+    margin: auto;
+    margin-top: 80px;
+    max-width: 420px;
+}
+
+.other_item_title{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    max-width: 1200px;
+}
+
+.other_item{
+    width: 100%;
+    height: 40px;
+    margin: auto;
+    margin-top: 30px;
+    max-width: 1120px;
+}
+
+
+/* 태그 */
+.other_tag{
+    display: flex;
+}
+
+.other_tag > li:not(:last-child){
+    margin-right: 7px;
+    text-align: center;
+}
+
+.other_tag > li{
+    padding: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: 1px solid #e50014;
+    font-size: 14px;
+    color: #e50014;
+    border-radius: 20px;
+    margin: auto;
+}
+
+
+/* 카테고리 메뉴*/
+.other_category_menu{
+    display: flex;
+    margin-top: 105px;
+}
+
+.other_category_menu > li{
+    width: 120px;
+    height: 50px;
+    background: #e50014;
+    border-radius: 12px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+/* 카테고리 */
+.other_category_area{
+    position: relative;
+    background: #fff;
+    width: 100%;
+    height: 530px;
+    max-width: 420px;
+    border-radius: 12px;
+    border: 1px solid #e8e8e8;
+    margin: auto;
+    overflow: scroll;
+    margin-top: -15px;
+}
+
+.other_category{
+    width: 400px;
+    height: 480px;
+    margin: auto;
+    display: block;
+}
+
+/* 아이템 */
+
+.other_cont{
+    width: 366px;
+    height: 147px;
+    background: #fff;
+    display: flex;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-top: 25px;
+}
+
+
+
+
+/* 더보기 버튼 */
+.other_cont_btn_area{
+    width: 420px;
+    height: 147px;
+    display: flex;
+    margin-top: 30px;
+}
+
+.other_cont_btn{
+    width: 166px;
+    height: 57px;
+    background: #fff;
+    /*border: 1px solid #cacaca;*/
+    margin: auto;
+    cursor: pointer;
+}
+
+.other_cont_btn_txt{
+    font-size: 14px;
+    color: #cacaca;
+    text-align: center;
+    margin-left: 0px;
+    margin-top: -8px;
+}
+
+.other_cont_btn_img{
+    text-align: center;
+}
+
+.other_cont_btn_img >img{
+    width: 20px;
+    margin-top: 10px;
+}
+
+
+
+/*================ 띠베너 ================*/
+.mini_benner img{
+    width: 100%;
+    max-width: 800px;
+}
+
+.mini_benner{
+    width: 100%;
+    max-width: 800px;
+    height: 66px;
+    margin: auto;
+    margin-top: 80px;
+    cursor: pointer;
+}
+
+
+
+
+
+/*================ 홈플러스 소개 ================*/
+.introduce_area{
+    width: 100%;
+    height: 524px;
+    max-width: 420px;
+    display: block;
+    margin: auto;
+    margin-top: 80px;
+}
+
+.introduce_area > img{
+    width: 420px;
+}
+
+.introduce{
+    width: 420px;
+    height: 354px;
+}
+
+.introduce_txt{
+    width: 420px;
+    height: 250px;
+    margin-left: 0px;
+    margin-top: 32px;
+}
+
+.introduce_title{
+    font-size: 20px;
+    color: #4e4e4e;
+}
+
+.introduce_line{
+    width: 420px;
+    height: 1px;
+    background: #cacaca;
+    margin-top: 12px;
+}
+
+.introduce_cont{
+    font-size: 14px;
+    color: #4e4e4e;
+    margin-top: 12px;
+}
+
+
+
+
+
+/*============================================ 푸터 영역 ============================================*/
+.footer_area{
+    width: 100%;
+    height: 320px;
+    background: #2D1D25;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.footer{
+    width: 100%;
+    height: 220px;
+    max-width: 450px;
+    margin: auto;
+}
+
+
+/*====== 푸터 상단 ======*/
+.footer_top_area{
+    width: 100%;
+    height: 40px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.footer_top{
+    display: flex;
+    font-size: 10px;
+    line-height: 40px;
+}
+
+.footer_top > li{
+    color: #fff;
+    cursor: pointer;
+    margin-right: 7px;
+    margin: auto;
+}
+
+
+
+
+/*====== 푸터 왼쪽 하단 ======*/
+.footer_bottom_area{
+    display: block;
+}
+
+
+.footer_left{
+    width: 100%;
+    height: 140px;
+    max-width: 980px;
+    margin-top: 10px;
+}
+
+.footer_left img{
+    width: 140px;
+}
+
+.footer_left_txt{
+    font-size: 10px;
+    margin-right: 15px;
+    color: #937F8A;
+    margin-top: 3px;
+}
+
+.footer_left_txt strong{
+    color: #fff;
+}
+
+.footer_left_line{
+    display: flex;
+}
+
+.footer_left_txt > span{
+    text-decoration: underline;
+    font-size: 10px;
+    color: #cacaca;
+    cursor: pointer;
+}
+
+.footer_left_{
+    margin-top: 10px;
+}
+
+
+
+
+
+/*====== 푸터 오른쪽 하단 ======*/
+.footer_right{
+    width: 100%;
+    height: 100px;
+    max-width: 220px;
+    margin-top: 5px;
+    justify-content: right;
+}
+
+.logo_{
+    width: 100px;
+    height: 0px;
+}
+
+.footer_right_line{
+    display: flex;
+}
+
+.footer_right_txt{
+    font-size: 10px;
+    margin-left: 0px;
+    color: #937F8A;
+    margin-top: 3px;
+}
+
+.footer_right_txt strong{
+    color: #fff;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px){
+    
+    /*================ 추천 상품 카드 ================*/
+    
+    .best_card_area{
+        position: relative;
+        margin: auto;
+        width: 100%;
+        height: 446px;
+        display: block;
+        margin-top: 80px;
+        max-width: 368px;
+        min-width: 100px;
+    
+        margin-top: -50px;
+    }
+    
+    /* 카드 영역 및 그림자 */
+    .best_card{
+        height: 140px;
+        overflow: hidden;
+    }
+    
+    .best_card{
+        margin: 10px 0px 10px 0px;
+    }
+    
+    
+    .best_card_title{
+        font-size: 16px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .best_card_content{
+        height: 80px;
+        margin-bottom: 40px;
+    }
+    
+    /* 아이템 이미지 */
+    .best_card_img{
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        margin-left: 10px;
+    }
+    
+    /* 아이템 텍스트 */
+    .best_card_txt_area{
+        height: 80px;
+    }
+    
+    .best_card_category{
+        font-size: 10px;
+        margin-top: 2px;
+    }
+    
+    .best_card_name{
+        height: 43px;
+        font-size: 14px;
+    }
+    
+    .best_card_price{
+        font-size: 14px;
+    }
+    
+    .best_card_price span{
+        font-size: 10px;
+    }
+    
+
+
+
+    /*================ 퀵 버튼 ================*/
+
+.quick_btn_area{
+    height: 258px;
+}
+
+.quick_btn_area2{
+    width: 350px;
+    height: 258px;
+}
+
+.quick_btn{
+    display: block;
+    text-align: center;
+}
+
+/* 즉시배송 버튼 */
+.btn_delivery{
+    width: 350px;
+    height: 80px;
+}
+
+/* 등급혜택 ~ 베이커리 */
+.btn_part1{
+    display: flex;
+}
+
+/* 홈플델리 ~ 산지직송 */
+.btn_part2{
+    display: flex;
+    margin-top: 0px;
+}
+
+/* 등급혜택 ~ 산지직송 버튼*/
+.btn_part{
+    display: block;
+    margin-top: 5px;
+}
+
+.btn_{
+    width: 80px;
+    height: 80px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+}
+
+.btn_:not(:last-child){
+    margin-right: 5px;
+}
+
+/* 퀵버튼 이미지 */
+.quick_btn_area2 img{
+    width: 35px;
+    margin-top: 11px;
+}
+
+
+/* 퀵버튼 텍스트 */
+.quick_btn_txt{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+    }
+
+
+
+
+@media screen and (max-width: 580px){
+/*================ 24시간 타임 세일 ================*/
+.sale_item_area{
+    width: 100%;
+    height: 600px;
+    margin: auto;
+    margin-top: 80px;
+    max-width: 380px;
+}
+
+.sub_title{
+    text-align: center;
+    font-size: 13px;
+    color: #e50014;
+}
+
+.item_title{
+    text-align: center;
+    font-size: 26px;
+}
+
+/* 카운트다운 타이머 */
+@import url(https://fonts.googleapis.com/css?family=Lato:100,400);
+#the-final-countdown {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    padding: 2px;
+    font-size: 22px;
+}
+
+.red{
+    color: #e50014;
+}
+}

@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="main.js" defer></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+
+
+    <title>홈플러스</title>
+</head>
+<body>
+    <!--============================================ 상단 헤더 ============================================-->
+    <header>
+        <div class="header_area">
+            <div class="header">
+                <!--== 검색창 ==-->
+                <div class="search_area" >
+                    <form class="search_area_form">
+                        <input type="search" placeholder="검색어를 입력하세요.">
+                        <div><img src="images/searth_icon.png" style="width: 25px; height: 25px;" alt="검색 버튼"></div>
+                    </form>
+                </div>
+                <!--== 홈플러스 로고 ==-->
+                <div class="logo_area"><a href="index.html"><img src="images/homeplus_logo.png" class="logo_img" alt="홈플러스 로고 이미지"></a></div>
+                <div class="topBtn_area">
+                    <div class="userBtn_area"><img src="images/user.png" class="userBtn_img" alt="사용자 버튼"></div>
+                    <div class="shopBtn_area"><img src="images/shopping-cart.png" class="shopBtn_img" alt="장바구니 버튼"></div>
+                    <!-- 1200px 시 나타나는 햄버거 메뉴 -->
+                    <div class="menuBtn_area">
+                        <button class="slide-open" id="slide-open">
+                            <span class="burger" id="burger"> 
+                            <span class="top-line"></span> 
+                            <span class="bot-line"></span> 
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="burger_menu_area">
+            <div class="burger_menu_black_area">
+                <div class="burger_menu_white_area">
+                    <div class="burger_menu_user">
+                        <img src="images/user_gray.png" class="userBtn_gray_img" alt="사용자 버튼">
+                        <div class="burger_menu_login_txt">로그인 | 회원가입</div>
+                    </div>
+                    <div class="burger_menu_line"></div>
+                    <ul class="burger_menu_txt">
+                        <li><a href="#" class="category_link">카테고리</a></li>
+                        <li><a href="#" class="event_link">전단행사</a></li>
+                        <li><a href="#" class="newproduct_link">신상품</a></li>
+                        <li><a href="#" class="specialprice_link">단독특가</a></li>
+                        <li><a href="#" class="best_link">베스트</a></li>
+                        <li><a href="#" class="special_link">기획전</a></li>
+                        <li><a href="#" class="brand_link">브랜드관</a></li>
+                        <li><a href="#" class="purchase_link">자주구매</a></li>
+                        <li><a href="#" class="delivery_link">택배배송</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--============================================ 네비게이션 바 ============================================-->
+    <nav>
+        <div class="nav_area">
+            <div class="nav">
+                <div class="nav_menu">
+                    <div id="underline"></div>
+                    <a href="#" class="category_link">카테고리</a>
+                    <a href="#" class="event_link">전단행사</a>
+                    <a href="#" class="newproduct_link">신상품</a>
+                    <a href="#" class="specialprice_link">단독특가</a>
+                    <a href="#" class="best_link">베스트</a>
+                    <a href="#" class="special_link">기획전</a>
+                    <a href="#" class="brand_link">브랜드관</a>
+                    <a href="#" class="purchase_link">자주구매</a>
+                    <a href="#" class="delivery_link">택배배송</a>
+                </ul>
+            </div>
+        </div>
+
+        <!--================ 네비게이션 리스트 ================-->
+        <div class="navList_area">
+            <div class="navList_topline"></div>
+            <div class="navList">
+                <ul class="nav_menuList">
+                    <li><a href="#">과일</a></li>
+                    <li><a href="#">쌀/잡곡/견과</a></li>
+                    <li><a href="#">채소</a></li>
+                    <li><a href="#">수산물/건어물</a></li>
+                    <li><a href="#">정육/계란</a></li>
+                    <li><a href="#">음료/유제품</a></li>
+                    <li><a href="#">치킨/초밥</a></li>
+                    <li><a href="#">시그니처</a></li>
+                </ul>
+                <ul class="nav_menuList_list">
+                    <li><a href="#">이번주 행사상품</a></li>
+                    <li><a href="#">추천 행사상품</a></li>
+                </ul>
+                <ul class="nav_menuList_list">
+                    <li><a href="#">신상임당</a></li>
+                    <li><a href="#">헤어관리</a></li>
+                    <li><a href="#">펫 냠냠</a></li>
+                    <li><a href="#">시그니처 신상</a></li>
+                </ul>
+                <ul class="nav_menuList_list">
+                    <li><a href="#">신선식품</a></li>
+                    <li><a href="#">간편식</a></li>
+                    <li><a href="#">제과/음료</a></li>
+                    <li><a href="#">인테리어/가전</a></li>
+                    <li><a href="#">양말/가방</a></li>
+                    <li><a href="#">이너웨어</a></li>
+                </ul>
+                <ul class="nav_menuList_list">
+                    <li><a href="#">과일</a></li>
+                    <li><a href="#">쌀/잡곡/견과</a></li>
+                    <li><a href="#">채소</a></li>
+                    <li><a href="#">수산물/건어물</a></li>
+                    <li><a href="#">정육/계란</a></li>
+                    <li><a href="#">음료/유제품</a></li>
+                    <li><a href="#">치킨/초밥</a></li>
+                    <li><a href="#">시그니처</a></li>
+                </ul>
+                <ul class="nav_menuList_list">
+                    <li><a href="#">기획전</a></li>
+                </ul>
+                <ul class="nav_menuList_list">
+                    <li><a href="#">브랜드관</a></li>
+                </ul>
+                <ul class="nav_menuList_list">
+                    <li><a href="#">자주구매</a></li>
+                </ul>
+                <ul class="nav_menuList_list">
+                    <li><a href="#">택배배송</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--============================================ 섹션 시작 ============================================-->
+
+    <section>
+        <!--================ 상단 여백 ================-->
+        <section class="block_area">
+        </section>
+
+        <!--================ 상단 이미지 & 동영상 ================-->
+        <section class="main_img_area">
+            <div class="main_img">
+                <div class="main_img_black">
+                    <div class="block_area_"></div>
+                    <div class="youtube_video_area">
+                        <div class="youtube_video">
+                            <iframe class="homeplus_video" src="https://www.youtube.com/embed/BEDgZStBVKY" title="홈플러스 x 로제 브랜드 필름 메이킹 영상 | Behind the scenes : ROSÉ's fresh way of thinking" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; autoplay;" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="main_txt">
+                        <div class="main_txt_">
+                            <div class="main_txt_btn">더 많은 기획전을 보고 싶다면</div>
+                            <div class="main_icon">
+                                <img src="images/video_btn.png" alt="더 많은 기획전을 보고 싶다면">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--================ 추천 카드 ================-->
+        <article class="best_card_area">
+            <!-- 오늘의 추천 -->
+            <div class="best_card">
+                <div class="best_card_title">오늘의 추천</div>
+
+                <div class="best_card_content">
+                    <img class="best_card_img" src="images/item_01.jpg" alt="신선농장 성주참외 1.2KG(봉)">
+                    <div class="best_card_txt_area">
+                        <div class="best_card_category">과일</div>
+                        <div class="best_card_name">신선농장 성주참외 1.2KG(봉)</div>
+                        <div class="best_card_price">7,490원 <span>14,990원</span></div>
+                    </div>
+                </div>
+
+                <div class="best_card_content">
+                    <img class="best_card_img" src="images/item_02.jpg" alt="제스프리 썬 골드 키위 8-10입(팩)">
+                    <div class="best_card_txt_area">
+                        <div class="best_card_category">과일</div>
+                        <div class="best_card_name">제스프리 썬 골드 키위 8-10입(팩)</div>
+                        <div class="best_card_price">8,990원 <span>12,990원</span></div>
+                    </div>
+                </div>
+
+                <div class="best_card_content">
+                    <img class="best_card_img" src="images/item_03.jpg" alt="홈플러스 시그니처 튤립 국물 닭발">
+                    <div class="best_card_txt_area">
+                        <div class="best_card_category">밀키트</div>
+                        <div class="best_card_name">홈플러스 시그니처 튤립 국물 닭발</div>
+                        <div class="best_card_price">5,990원</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 할인 상품 -->
+            <div class="best_card" style="margin:auto;">
+                <div class="best_card_title">할인 상품</div>
+                
+                <div class="best_card_content">
+                    <img class="best_card_img" src="images/item_04.jpg" alt="완도전복(중) 5마리">
+                    <div class="best_card_txt_area">
+                        <div class="best_card_category">수산물</div>
+                        <div class="best_card_name">완도전복(중) 5마리</div>
+                        <div class="best_card_price">9,900원 <span>16,500원</span></div>
+                    </div>
+                </div>
+
+                <div class="best_card_content">
+                    <img class="best_card_img" src="images/item_05.jpg" alt="체리(미국) 400G(팩)">
+                    <div class="best_card_txt_area">
+                        <div class="best_card_category">과일</div>
+                        <div class="best_card_name">체리(미국) 400G(팩)</div>
+                        <div class="best_card_price">11,990원 <span>12,990원</span></div>
+                    </div>
+                </div>
+
+                <div class="best_card_content">
+                    <img class="best_card_img" src="images/item_06.jpg" alt="[몽블랑제]미니버터 크로와상 생지 440G">
+                    <div class="best_card_txt_area">
+                        <div class="best_card_category">베이커리</div>
+                        <div class="best_card_name">[몽블랑제]미니버터 크로와상 생지 440G</div>
+                        <div class="best_card_price">4,450원 <span>8,900원</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 새로운 상품 -->
+            <div class="best_card">
+                <div class="best_card_title">새로운 상품</div>
+                
+                <div class="best_card_content">
+                    <img class="best_card_img" src="images/item_07.jpg" alt="새벽 양상추(2입)">
+                    <div class="best_card_txt_area">
+                        <div class="best_card_category">채소</div>
+                        <div class="best_card_name">새벽 양상추(2입)</div>
+                        <div class="best_card_price">7,490원</span></div>
+                    </div>
+                </div>
+
+                <div class="best_card_content">
+                    <img class="best_card_img" src="images/item_08.jpg" alt="떠 먹는 아이스 홍시 6입">
+                    <div class="best_card_txt_area">
+                        <div class="best_card_category">냉동식품</div>
+                        <div class="best_card_name">떠 먹는 아이스 홍시 6입</div>
+                        <div class="best_card_price">4,990원</div>
+                    </div>
+                </div>
+
+                <div class="best_card_content">
+                    <img class="best_card_img" src="images/item_09.jpg" alt="손질 오징어 (원양산/해동/중) 4마리">
+                    <div class="best_card_txt_area">
+                        <div class="best_card_category">수산물</div>
+                        <div class="best_card_name">손질 오징어 (원양산/해동/중) 4마리</div>
+                        <div class="best_card_price">29,900원</div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!--================ 퀵 버튼 ================-->
+        <article class="quick_btn_area">
+            <div class="quick_btn_area2">
+                <div class="quick_btn">
+                    <div class="btn_delivery">
+                        <img src="images/btn_delivery.png" alt="즉시배송">
+                        <div class="quick_btn_txt" style="color: #fff;">즉시배송</div>
+                    </div>
+                    <div class="btn_part">
+                        <div class="btn_part1">
+                            <div class="btn_">
+                                <img src="images/btn_rating.png" alt="등급혜택">
+                                <div class="quick_btn_txt">등급혜택</div>
+                            </div>
+                            <div class="btn_">
+                                <img src="images/btn_event.png" alt="이벤트/쿠폰">
+                                <div class="quick_btn_txt">이벤트/쿠폰</div>
+                            </div>
+                            <div class="btn_">
+                                <img src="images/btn_mobile.png" alt="모바일 교환권">
+                                <div class="quick_btn_txt">모바일 교환권</div>
+                            </div>
+                            <div class="btn_">
+                                <img src="images/btn_bakery.png" alt="베이커리">
+                                <div class="quick_btn_txt">베이커리</div>
+                            </div>
+                        </div>
+                        <div class="btn_part2">
+                            <div class="btn_">
+                                <img src="images/btn_delhi.png" alt="홈플델리">
+                                <div class="quick_btn_txt">홈플델리</div>
+                            </div>
+                            <div class="btn_">
+                                <img src="images/btn_milkit.png" alt="밀키트">
+                                <div class="quick_btn_txt">밀키트</div>
+                            </div>
+                            <div class="btn_">
+                                <img src="images/btn_signature.png" alt="시그니처">
+                                <div class="quick_btn_txt">시그니처</div>
+                            </div>
+                            <div class="btn_">
+                                <img src="images/btn_fresh.png" alt="산지직송">
+                                <div class="quick_btn_txt">산지직송</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!--================ 24시간 타임 세일 ================-->
+        <article class="sale_item_area">
+            <div class="sub_title">오늘 단 하루만!</div>
+            <div class="item_title">24시간 타임 세일</div>
+            <!-- 카운트 다운 타이머 -->
+            <div id="the-final-countdown">
+                <p></p>
+            </div>
+            <!-- 타임 세일 아이템 -->
+            <div class="slider-wrap">
+                <div class="cont">
+                    <div class="cont_item">
+                        <div class="cont_item_img">
+                            <img src="images/item_10.jpg" alt="블랙타이거새우 (말레이시아/해동)마리">
+                        </div>
+                        <div class="cont_item_txt">
+                            <div class="cont_category">수산물</div>
+                            <div class="cont_name">블랙타이거새우 (말레이시아/해동)마리</div>
+                            <div class="cont_price">1,050원 <span>1,500원</span></div>
+                            <span class="cont_cart_icon"><img src="images/shopping-cart-mini.png" alt="장바구니 버튼"></span>
+                            <span class="cont_heart_icon"><img src="images/heart.png" alt="마음에 드는 상품 버튼"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="cont_item">
+                        <div class="cont_item_img">
+                            <img src="images/item_11.jpg" alt="품격 있는 맛 프리미엄 고당도 사과 1.2KG (봉)">
+                        </div>
+                        <div class="cont_item_txt">
+                            <div class="cont_category">과일</div>
+                            <div class="cont_name">품격 있는 맛 프리미엄 고당도 사과 1.2KG (봉)</div>
+                            <div class="cont_price">10,990원 <span>12,900원</span></div>
+                            <span class="cont_cart_icon"><img src="images/shopping-cart-mini.png" alt="장바구니 버튼"></span>
+                            <span class="cont_heart_icon"><img src="images/heart.png" alt="마음에 드는 상품 버튼"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="cont_item">
+                        <div class="cont_item_img">
+                            <img src="images/item_12.jpg" alt="고시히카리 초밥세트 30입">
+                        </div>
+                        <div class="cont_item_txt">
+                            <div class="cont_category">초밥</div>
+                            <div class="cont_name">고시히카리 초밥세트 30입</div>
+                            <div class="cont_price">12,990원 <span>13,990원</span></div>
+                            <span class="cont_cart_icon"><img src="images/shopping-cart-mini.png" alt="장바구니 버튼"></span>
+                            <span class="cont_heart_icon"><img src="images/heart.png" alt="마음에 드는 상품 버튼"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="cont_item">
+                        <div class="cont_item_img">
+                            <img src="images/item_13.jpg" alt="양파 3KG(망)">
+                        </div>
+                        <div class="cont_item_txt">
+                            <div class="cont_category">채소</div>
+                            <div class="cont_name">양파 3KG(망)</div>
+                            <div class="cont_price">5,490원 <span>6,490원</span></div>
+                            <span class="cont_cart_icon"><img src="images/shopping-cart-mini.png" alt="장바구니 버튼"></span>
+                            <span class="cont_heart_icon"><img src="images/heart.png" alt="마음에 드는 상품 버튼"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="cont_item">
+                        <div class="cont_item_img">
+                            <img src="images/item_14.jpg" alt="항공직송 생연어 (횟감용) 노르웨이산/100G">
+                        </div>
+                        <div class="cont_item_txt">
+                            <div class="cont_category">수산물</div>
+                            <div class="cont_name">항공직송 생연어 (횟감용) 노르웨이산/100G</div>
+                            <div class="cont_price">2,890원 <span>3,890원</span></div>
+                            <span class="cont_cart_icon"><img src="images/shopping-cart-mini.png" alt="장바구니 버튼"></span>
+                            <span class="cont_heart_icon"><img src="images/heart.png" alt="마음에 드는 상품 버튼"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="cont_item">
+                        <div class="cont_item_img">
+                            <img src="images/item_15.jpg" alt="[몽블랑제] 갈릭 찰파이 8입">
+                        </div>
+                        <div class="cont_item_txt">
+                            <div class="cont_category">베이커리</div>
+                            <div class="cont_name">[몽블랑제] 갈릭 찰파이 8입</div>
+                            <div class="cont_price">4,490원 <span>6,490원</span></div>
+                            <span class="cont_cart_icon"><img src="images/shopping-cart-mini.png" alt="장바구니 버튼"></span>
+                            <span class="cont_heart_icon"><img src="images/heart.png" alt="마음에 드는 상품 버튼"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!--================ 가장 많이 찾은 상품 ================-->
+        <article class="best_item_area">
+            <div class="best_item_"></div>
+            <div class="sub_title">혹시 이 상품을 찾으시나요?</div>
+            <div class="item_title">가장 많이 찾는 상품</div>
+            <div class="best_item">
+                <!-- 좌측 아이템 영역 -->
+                <div class="best_item_cont">
+                    <div class="best_item_cont_item">
+                        <div class="best_item_cont_item_img">
+                            <img src="images/item_16.jpg" alt="초당옥수수(개/국산)">
+                        </div>
+                        <div class="best_item_cont_item_txt">
+                            <div class="best_item_cont_category">채소</div>
+                            <div class="best_item_cont_name">초당옥수수(개/국산)</div>
+                            <span class="best_item_cont_price">1,590원</span>
+                            <span class="best_cart_icon"><img src="images/shopping-cart-mini.png" alt="장바구니 버튼"></span>
+                            <span class="best_heart_icon"><img src="images/heart.png" alt="마음에 드는 상품 버튼"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 스크롤 영역 -->
+                <!-- 좌측 스크롤 -->
+                <div class="best_item_scroll">
+                    <div class="scroll_area">
+                        <div class="best_scroll_content" style="margin-top: 10px;">
+                            <img class="best_scroll_img" src="images/item_17.jpg" alt="강원맑은청 찰토마토 3KG(박스)">
+                            <div class="best_scroll_txt_area">
+                                <div class="best_scroll_category">과일</div>
+                                <div class="best_scroll_name">강원맑은청 찰토마토 3KG(박스)</div>
+                                <span class="best_scroll_price">7,490원 <span>14,990원</span></span>
+                                <span class="scroll_cart_icon"><img src="images/shopping-cart-mini.png" alt="장바구니 버튼"></span>
+                                <span class="scroll_heart_icon"><img src="images/heart.png" alt="마음에 드는 상품 버튼"></span>
+                            </div>
+                        </div>
+
+                        <div class="best_scroll_content">
+                            <img class="best_scroll_img" src="images/item_18.jpg" alt="[호주청정우]곡물먹고 자란 척아이롤 100G/소고기">
+                            <div class="best_scroll_txt_area">
+                                <div class="best_scroll_category">육류</div>
+                                <div class="best_scroll_name">[호주청정우]곡물먹고 자란 척아이롤 100G/소고기</div>
+                                <span class="best_scroll_price">1,850원 <span>3,090원</span></span>
+                                <span class="scroll_cart_icon"><img src="images/shopping-cart-mini.png" alt="장바구니 버튼"></span>
+                                <span class="scroll_heart_icon"><img src="images/heart.png" alt="마음에 드는 상품 버튼"></span>
+                            </div>
+                        </div>
+
+                        <div class="best_scroll_content">
+                            <img class="best_scroll_img" src="images/item_19.jpg" alt="부드러운 복숭아 1.5KG(박스)">
+                            <div class="best_scroll_txt_area">
+                                <div class="best_scroll_category">과일</div>
+                                <div class="best_scroll_name">부드러운 복숭아 1.5KG(박스)</div>
+                                <span class="best_scroll_price">10,990원 <span>14,990원</span></span>
+                                <span class="scroll_cart_icon"><img src="images/shopping-cart-mini.png" alt="장바구니 버튼"></span>
+                                <span class="scroll_heart_icon"><img src="images/heart.png" alt="마음에 드는 상품 버튼"></span>
+                            </div>
+                        </div>
+
+                        <div class="best_scroll_content">
+                            <img class="best_scroll_img" src="images/item_20.jpg" alt="햇 청도 감 말랭이 300G(팩)">
+                            <div class="best_scroll_txt_area">
+                                <div class="best_scroll_category">과일</div>
+                                <div class="best_scroll_name">햇 청도 감 말랭이 300G(팩)</div>
+                                <span class="best_scroll_price">5,990원</span>
+                                <span class="scroll_cart_icon"><img src="images/shopping-cart-mini.png" alt="장바구니 버튼"></span>
+                                <span class="scroll_heart_icon"><img src="images/heart.png" alt="마음에 드는 상품 버튼"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 우측 스크롤 -->
+                    <div class="scroll_area">
+                        <div class="best_scroll_content" style="margin-top: 10px;">
+                            <img class="best_scroll_img" src="images/item_21.jpg" alt="삼천동식탁 명란젓 80G">
+                            <div class="best_scroll_txt_area">
+                                <div class="best_scroll_category">과자</div>
+                                <div class="best_scroll_name">삼천동식탁 명란젓 80G</div>
+                                <span class="best_scroll_price">4,500원</span>
+                                <span class="scroll_cart_icon"><img src="images/shopping-cart-mini.png" alt="장바구니 버튼"></span>
+                                <span class="scroll_heart_icon"><img src="images/heart.png" alt="마음에 드는 상품 버튼"></span>
+                            </div>
+                        </div>
+
+                        <div class="best_scroll_content">
+                            <img class="best_scroll_img" src="images/item_22.jpg" alt="홈플러스 시그니처 홈밀 리챔 더블라이트 건면 부대찌개">
+                            <div class="best_scroll_txt_area">
+                                <div class="best_scroll_category">밀키트</div>
+                                <div class="best_scroll_name">홈플러스 시그니처 홈밀 리챔 더블라이트 건면 부대찌개</div>
+                                <span class="best_scroll_price">8,330원 <span>11,990원</span></span>
+                                <span class="scroll_cart_icon"><img src="images/shopping-cart-mini.png" alt="장바구니 버튼"></span>
+                                <span class="scroll_heart_icon"><img src="images/heart.png" alt="마음에 드는 상품 버튼"></span>
+                            </div>
+                        </div>
+
+                        <div class="best_scroll_content">
+                            <img class="best_scroll_img" src="images/item_23.jpg" alt="홈플러스 시그니처 메추리알 장조림 1KG">
+                            <div class="best_scroll_txt_area">
+                                <div class="best_scroll_category">반찬</div>
+                                <div class="best_scroll_name">홈플러스 시그니처 메추리알 장조림 1KG</div>
+                                <span class="best_scroll_price">8,990원</span>
+                                <span class="scroll_cart_icon"><img src="images/shopping-cart-mini.png" alt="장바구니 버튼"></span>
+                                <span class="scroll_heart_icon"><img src="images/heart.png" alt="마음에 드는 상품 버튼"></span>
+                            </div>
+                        </div>
+
+                        <div class="best_scroll_content">
+                            <img class="best_scroll_img" src="images/item_24.jpg" alt="홈플러스 시그니처 드립커피 콜롬비아 슈프리모">
+                            <div class="best_scroll_txt_area">
+                                <div class="best_scroll_category">과일</div>
+                                <div class="best_scroll_name">홈플러스 시그니처 드립커피 콜롬비아 슈프리모</div>
+                                <span class="best_scroll_price">3,200원 </span>
+                                <span class="scroll_cart_icon"><img src="images/shopping-cart-mini.png" alt="장바구니 버튼"></span>
+                                <span class="scroll_heart_icon"><img src="images/heart.png" alt="마음에 드는 상품 버튼"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!--================ 홈플러스 시그니처 ================-->
+        <article class="other_item_area">
+            <div class="sub_title">오직 우리 매장만의 특별함!</div>
+            <div class="item_title">홈플러스 시그니처</div>
+            <div class="other_item">
+                <!-- 해시태그 -->
+                <ul class="other_tag">
+                    <li>#홈플러스_시그니처</li>
+                    <li>#건강도챙기고_맛도챙기고</li>
+                    <li>#하나만사면_완성품이_뚝딱</li>
+                    <li>#저렴하고_합리적인_가격</li>
+                    <li>#아직_안사본_사람은_있어도</li>
+                    <li>#한번만_사본_사람은_없어</li>
+                </ul>
+            </div>
+            <!-- 상단 카테고리 -->
+            <ul class="other_category_menu">
+                <li>전체</li>
+                <li>행사상품</li>
+                <li>신상품</li>
+            </ul>
+            
+                <div class="other_category_area">
+                    <div class="other_category">
+                        <!-- 좌측 -->    
+                        <div class="other_category_cont">
+                            <div class="other_cont">
+                                <div class="other_cont_img">
+                                    <img src="images/item_25.jpg" alt="홈플러스 시그니처 냉동 블루베리 1KG">
+                                </div>
+                                <div class="other_cont_txt">
+                                    <div class="other_cont_category">냉동식품</div>
+                                    <div class="other_cont_name">홈플러스 시그니처 냉동 블루베리 1KG</div>
+                                    <span class="other_cont_price">7,190원 <span>7,990원</span></span>
+                                    <span class="other_cont_cart_icon"><img src="images/shopping-cart-mini.png" alt="장바구니 버튼"></span>
+                                    <span class="other_cont_heart_icon"><img src="images/heart.png" alt="마음에 드는 상품 버튼"></span>
+                                </div>
+                            </div>
+
+                            <div class="other_cont">
+                                <div class="other_cont_img">
+                                    <img src="images/item_26.jpg" alt="홈플러스 시그니처 쟌슨빌 부대찌개">
+                                </div>
+                                <div class="other_cont_txt">
+                                    <div class="other_cont_category">밀키트</div>
+                                    <div class="other_cont_name">홈플러스 시그니처 쟌슨빌 부대찌개</div>
+                                    <span class="other_cont_price">8,490원 <span>9,490원</span></span>
+                                    <span class="other_cont_cart_icon"><img src="images/shopping-cart-mini.png" alt="장바구니 버튼"></span>
+                                    <span class="other_cont_heart_icon"><img src="images/heart.png" alt="마음에 드는 상품 버튼"></span>
+                                </div>
+                            </div>
+
+                            <div class="other_cont">
+                                <div class="other_cont_img">
+                                    <img src="images/item_27.jpg" alt="홈플러스 시그니처 엑스트라버진 올리브유 1L">
+                                </div>
+                                <div class="other_cont_txt">
+                                    <div class="other_cont_category">양념</div>
+                                    <div class="other_cont_name">홈플러스 시그니처 엑스트라버진 올리브유 1L</div>
+                                    <span class="other_cont_price">7,190원</span>
+                                    <span class="other_cont_cart_icon"><img src="images/shopping-cart-mini.png" alt="장바구니 버튼"></span>
+                                    <span class="other_cont_heart_icon"><img src="images/heart.png" alt="마음에 드는 상품 버튼"></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 중앙 -->
+                        <div class="other_category_cont">
+                            <div class="other_cont">
+                                <div class="other_cont_img">
+                                    <img src="images/item_28.jpg" alt="홈플러스 시그니처 소불고기 버섯전골">
+                                </div>
+                                <div class="other_cont_txt">
+                                    <div class="other_cont_category">밀키트</div>
+                                    <div class="other_cont_name">홈플러스 시그니처 소불고기 버섯전골</div>
+                                    <span class="other_cont_price">6,990원 <span>9,990원</span></span>
+                                    <span class="other_cont_cart_icon"><img src="images/shopping-cart-mini.png" alt="장바구니 버튼"></span>
+                                    <span class="other_cont_heart_icon"><img src="images/heart.png" alt="마음에 드는 상품 버튼"></span>
+                                </div>
+                            </div>
+
+                            <div class="other_cont">
+                                <div class="other_cont_img">
+                                    <img src="images/item_29.jpg" alt="홈플러스 시그니처 전통 삼계탕">
+                                </div>
+                                <div class="other_cont_txt">
+                                    <div class="other_cont_category">밀키트</div>
+                                    <div class="other_cont_name">홈플러스 시그니처 전통 삼계탕</div>
+                                    <span class="other_cont_price">7,490원 <span>8,490원</span></span>
+                                    <span class="other_cont_cart_icon"><img src="images/shopping-cart-mini.png" alt="장바구니 버튼"></span>
+                                    <span class="other_cont_heart_icon"><img src="images/heart.png" alt="마음에 드는 상품 버튼"></span>
+                                </div>
+                            </div>
+
+                            <div class="other_cont">
+                                <div class="other_cont_img">
+                                    <img src="images/item_30.jpg" alt="홈플러스 시그니처 국산 냉동 딸기 1KG">
+                                </div>
+                                <div class="other_cont_txt">
+                                    <div class="other_cont_category">냉동식품</div>
+                                    <div class="other_cont_name">홈플러스 시그니처 국산 냉동 딸기 1KG</div>
+                                    <span class="other_cont_price">8,990원 <span>9,990원</span></span>
+                                    <span class="other_cont_cart_icon"><img src="images/shopping-cart-mini.png" alt="장바구니 버튼"></span>
+                                    <span class="other_cont_heart_icon"><img src="images/heart.png" alt="마음에 드는 상품 버튼"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 우측 -->
+                        <div class="other_category_cont">
+                            <div class="other_cont">
+                                <div class="other_cont_img">
+                                    <img src="images/item_31.jpg" alt="홈플러스 시그니처 감자수제비 순두부찌개">
+                                </div>
+                                <div class="other_cont_txt">
+                                    <div class="other_cont_category">밀키트</div>
+                                    <div class="other_cont_name">홈플러스 시그니처 감자수제비 순두부찌개</div>
+                                    <span class="other_cont_price">5,590원 <span>7,990원</span></span>
+                                    <span class="other_cont_cart_icon"><img src="images/shopping-cart-mini.png" alt="장바구니 버튼"></span>
+                                    <span class="other_cont_heart_icon"><img src="images/heart.png" alt="마음에 드는 상품 버튼"></span>
+                                </div>
+                            </div>
+
+                            <div class="other_cont">
+                                <div class="other_cont_img">
+                                    <img src="images/item_32.jpg" alt="홈플러스 시그니처 우삼겹 된장찌개">
+                                </div>
+                                <div class="other_cont_txt">
+                                    <div class="other_cont_category">밀키트</div>
+                                    <div class="other_cont_name">홈플러스 시그니처 우삼겹 된장찌개</div>
+                                    <span class="other_cont_price">7,990원 <span>8,990원</span></span>
+                                    <span class="other_cont_cart_icon"><img src="images/shopping-cart-mini.png" alt="장바구니 버튼"></span>
+                                    <span class="other_cont_heart_icon"><img src="images/heart.png" alt="마음에 드는 상품 버튼"></span>
+                                </div>
+                            </div>
+
+                            <div class="other_cont_btn_area">
+                                <div class="other_cont_btn">
+                                    <div class="other_cont_btn_img">
+                                        <img src="images/plus.png" alt="상품 보러가기">
+                                    </div>
+                                    <div class="other_cont_btn_txt">상품 보러가기</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+
+        </article>
+
+        <!--================ 띠베너 ================-->
+        <article class="mini_benner">
+            <img src="images/mini_benner01.jpg" alt="마이 홈플러스 카드 만들러 가기">
+        </article>
+
+        <!--================ 홈플러스 소개 ================-->
+        <article class="introduce_area" data-scroll>
+            <img src="images/homeplus_img.jpg" alt="홈플러스 회사 이미지">
+            <div class="introduce">
+                <div class="introduce_txt">
+                    <div class="introduce_title">온가족의 즐거운 쇼핑공간 홈플러스</div>
+                    <div class="introduce_line"></div>
+                    <div class="introduce_cont">경쟁력 있는 가격과 우수한 품질로 고객에게 사랑 받아온 홈플러스는 1997년 창립 이후 24년 간 대한민국 유통업계를 이끌어온 대표 기업입니다.</div>
+                    <div class="introduce_cont">
+                        고객에게 새로운 쇼핑 경험을 제공하고, 온·오프라인을 아우르는 올라인(All-line) 비즈니스로 업계를 선도하는 것은 물론
+                        기업의 사회적 책임을 다함으로써 고객과 직원 모두가 행복한 기업으로 성장해나가겠습니다.</div>
+                    <div class="introduce_cont">
+                        홈플러스는 언제나 여러분 곁에서 함께 하겠습니다.</div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!--============================================ 푸터 영역 ============================================-->
+    <footer class="footer_area">
+        <div class="footer">
+            <div class="footer_top_area">
+                <ul class="footer_top">
+                    <li>회사소개</li>
+                    <li>공지사항</li>
+                    <li>이용약관</li>
+                    <li>개인정보처리방침</li>
+                    <li>청소년보호정책</li>
+                    <li>입점재휴문의</li>
+                    <li>고객의견함</li>
+                    <li>인재채용</li>
+                </ul>
+            </div>
+            <div class="footer_bottom_area">
+                <div class="footer_left">
+                    <img src="images/homeplus_logo.png" alt="홈플러스 로고 이미지">
+                    <div class="footer_left_line">
+                        <div class="footer_left_txt">대표이사: 이제훈</div>
+                        <div class="footer_left_txt">주소: 서울특별시 강서구 화곡로 398(등촌동)</div>
+                        <div class="footer_left_txt">사업자등록번호: 220-81-60348</div>
+                    </div>
+                    <div class="footer_left_line">
+                        <div class="footer_left_txt">통신판매신고번호: 2016-서울강서-0451호 <span>사업자 정보확인</span></div>
+                        <div class="footer_left_txt">청소년 보호책임자: 조혜영</div>
+                    </div>
+
+                    <div class="footer_left_"></div>
+
+                    <div class="footer_left_line">
+                        <div class="footer_left_txt"><strong>소비자피해보상보험서비스 </strong><span>가입사실 확인</span></div>
+                    </div>
+                    <div class="footer_left_line">
+                        <div class="footer_left_txt">Copyright © Homeplus Co., LTD. All Rights Reserved.</div>
+                    </div>
+                </div>
+
+                <div class="footer_right">
+                    <div class="logo_"></div>
+                    <div class="footer_right_line">
+                        <div class="footer_right_txt"><strong>고객센터</strong></div>
+                        <div class="footer_right_txt">1577-3355</div>
+                    </div>
+
+                    <div class="footer_right_line">
+                        <div class="footer_right_txt">업무시간 : 09시 ~ 22시(명절당일 휴무)</div>
+                    </div>
+
+                    <div class="footer_left_"></div>
+
+                    <div class="footer_right_line">
+                        <div class="footer_right_txt"><strong>분쟁처리</strong></div>
+                        <div class="footer_right_txt">1577-3355</div>
+                    </div>
+                    <div class="footer_right_line">
+                        <div class="footer_right_txt">Email :onlinemart@homeplus.co.kr</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+</html>
